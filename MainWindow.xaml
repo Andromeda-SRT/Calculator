@@ -84,17 +84,17 @@
             </Setter>
         </Style>
     </Window.Resources>
-    
-    
-    
+
+
+
     <Grid>
 
         <Border Background="#FF8D8D8D" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Top">
-            <TextBlock x:Name="Title" TextWrapping="Wrap" Foreground="White" FontSize="18" TextDecorations="{x:Null}" TextAlignment="Center" FontFamily="Ebrima" RenderTransformOrigin="0.499,0.613" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Margin="0,0,57,0" Padding="20,0,0,0"><Run Text="Калькулятор "/><Run Text="Beta 1.4.5"/></TextBlock>
+            <TextBlock x:Name="Title" TextWrapping="Wrap" Foreground="White" FontSize="18" TextDecorations="{x:Null}" TextAlignment="Center" FontFamily="Ebrima" RenderTransformOrigin="0.499,0.613" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Margin="0,0,57,0" Padding="20,0,0,0"><Run Text="Калькулятор "/><Run Text="Beta 2.1"/></TextBlock>
         </Border>
-        <Border Background="#FF8D8D8D" RenderTransformOrigin="0.5,0.5" Height="16" VerticalAlignment="Top" Margin="0,347,0,0"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="UCLK inc." VerticalAlignment="Top" Margin="224,347,0,0" Width="63" Height="16" Foreground="White"/>
-         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="©By Voloshenko Vadim" VerticalAlignment="Top" Margin="10,347,0,0" Width="130" Height="16" Foreground="White"/> 
+        <Border Background="#FF8D8D8D" RenderTransformOrigin="0.5,0.5" Height="16" VerticalAlignment="Top" Margin="0,347,0,0" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ANDROMEDA-SRT" VerticalAlignment="Top" Margin="157,347,0,0" Width="109" Height="16" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="©By Voloshenko Vadim" VerticalAlignment="Top" Margin="10,347,0,0" Width="130" Height="16" Foreground="White"/>
         <!--Цвет окна-->
 
         <Button x:Name="Close" Margin="269,0,0,333" Background="{x:Null}" Click="Close_Click" BorderBrush="#FF707070" Foreground="Black" RenderTransformOrigin="0.5,0.5">
@@ -149,30 +149,35 @@
         </Button>
         <!--Кнопка сворачивания-->
 
-        <Button x:Name="Button0" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="10,294,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button0_Click"/>
-        <Button x:Name="Button1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="10,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button1_Click"/>
-        <Button x:Name="Button2" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="55,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button2_Click"/>
-        <Button x:Name="Button3" Content="3" Width="40" Margin="100,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Button3_Click"/>
-        <Button x:Name="Button4" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="10,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button4_Click"/>
-        <Button x:Name="Button5" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="55,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button5_Click"/>
-        <Button x:Name="Button6" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="100,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button6_Click"/>
-        <Button x:Name="Button7" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="10,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button7_Click"/>
-        <Button x:Name="Button8" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="55,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button8_Click"/>
-        <Button x:Name="Button9" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="100,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Button9_Click"/>
+        <Button x:Name="Zero" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Margin="10,294,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Zero_Click"/>
+        <Button x:Name="One" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="10,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="One_Click"/>
+        <Button x:Name="Two" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="55,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Two_Click"/>
+        <Button x:Name="Thre" Content="3" Width="40" Margin="100,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Thre_Click"/>
+        <Button x:Name="Four" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="10,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Four_Click"/>
+        <Button x:Name="Five" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="55,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Five_Click"/>
+        <Button x:Name="Six" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="100,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Six_Click"/>
+        <Button x:Name="Seven" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="10,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Seven_Click"/>
+        <Button x:Name="Aight" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="55,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Aight_Click"/>
+        <Button x:Name="Nine" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="100,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Nine_Click"/>
         <!--Кнопки с цыфрами-->
 
         <Button x:Name="Dot" Content="," HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Margin="100,294,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" BorderBrush="{x:Null}" Click="Dot_Click"/>
         <Button x:Name="Plus" Content="+" Width="40" Margin="157,294,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Plus_Click"/>
         <Button x:Name="Minus" Content="-" Width="40" Margin="157,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Minus_Click"/>
-        <Button x:Name="Multiplication" Content="*" Width="40" Margin="202,294,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Multiplication_Click"/>
-        <Button x:Name="Separation" Content="/" Width="40" Margin="202,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Separation_Click"/>
+        <Button x:Name="Multiplication" Content="*" Width="40" Margin="202,294,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Mult_Click"/>
+        <Button x:Name="Separation" Content="/" Width="40" Margin="202,249,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Div_Click"/>
         <Image x:Name="ico" Margin="4,0,265,333" Source="calculator.ico" Stretch="Fill"/>
         <Button x:Name="Backspace" Content="←" Width="85" Margin="202,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" FontWeight="Bold" Click="Backspace_Click"/>
-        <Button x:Name="Per_Cent" Content="%" Width="40" Margin="202,204,0,0" Height="40" Background="Red" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Per_Cent_Click"/>
+        <Button x:Name="Per_Cent" Content="%" Width="40" Margin="202,204,0,0" Height="40" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Per_Cent_Click" Visibility="Hidden">
+            <Button.Background>
+                <SolidColorBrush Color="#FF82113E"/>
+            </Button.Background>
+        </Button>
         <Button x:Name="CE" Content="CE" Width="40" Margin="157,159,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="CE_Click"/>
-        <Button x:Name="Roots" Content="√" Width="40" Margin="157,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Roots_Click"/>
-        <Button x:Name="_1_x" Content="1/x" Width="40" Margin="247,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="_1_x_Click"/>
-        <Button x:Name="Equally" Content="=" Width="40" Margin="247,249,0,0" Height="85" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="YellowGreen" Click="Equally_Click"/>
+        <Button x:Name="Roots" Content="√" Width="40" Margin="157,204,0,0" Height="40" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="Roots_Click" Background="#FF82113E" Visibility="Hidden"/>
+        <Button x:Name="_1_x" Content="1/x" Width="40" Margin="247,204,0,0" Height="40" Background="#82113E" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="_1_x_Click" Visibility="Hidden"/>
+        <Button x:Name="pl_and_mi" Content="Invers" Width="130" Margin="157,204,0,0" Height="40" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="pl_and_mi_Click"/>
+        <Button x:Name="Equal" Content="=" Width="40" Margin="247,249,0,0" Height="85" Background="#FFF5F3F3" FontSize="18" FontWeight="Bold" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="YellowGreen" Click="Equal_Click"/>
         <!--Основные кнопки интерфейса-->
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="277" Margin="10,45,0,0" Background="#FFF5F3F3"/>
 
